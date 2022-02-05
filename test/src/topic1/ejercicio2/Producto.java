@@ -70,11 +70,35 @@ public class Producto implements Observable {
         }
     }
 
+    public void notificarDesuscription(Object  obj){
+    for(Observador o: observadores) {
+        if(o.equals(obj)){
+            o.updateDesuscripcion();
+        } 
+    }
+    // Logica de desucripcion
+}
+
     @Override
     public void notificarDesuscripcion() {
-        for(Observador o: observadores) {
-            o.updateDesuscripcion();
-        }
+        // TODO Auto-generated method stub
+        
     }
+
+
+    // @Override
+    // public void notificarDesuscripcion(Suscriptor suscriptor) {
+    //     if(suscriptor != null) {
+    //         for(Observador o: observadores) {
+    //             if(o.equals(suscriptor)){
+    //                 o.updateDesuscripcion();
+    //             } 
+    //         }
+    //     } else {
+    //         for(Observador o: observadores) {
+    //             o.updateDesuscripcion();
+    //         }
+    //     }
+    // }
     
 }

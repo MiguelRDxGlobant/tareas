@@ -24,13 +24,14 @@ public class Main {
 
         celular.enlazarObservador(suscriptor4);
 
-        celular.desenlazarObservador(suscriptor1);
-        celular.Desuscribirse();
+        celular.notificarDesuscription(suscriptor4);
 
+        
         celular.Suscribirse();
-
+        
         celular.actPrecio();
-
+        
+        celular.Desuscribirse();
     }
     
 }
